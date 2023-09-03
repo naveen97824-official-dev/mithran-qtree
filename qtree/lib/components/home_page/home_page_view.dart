@@ -85,10 +85,7 @@ class HomePageView extends State<HomePage> {
                   ),
                   title: const Text('logout'),
                   onTap: () {
-                    Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginPage()),
-                        (route) => false);
+                    Navigator.pushNamed(context, '/login');
                     viewModel!.store1!
                         .dispatch(UserLoginAction(userLogin: null));
                   },
